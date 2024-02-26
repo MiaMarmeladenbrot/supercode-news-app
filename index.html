@@ -11,36 +11,34 @@
       <h1>Finde deine News</h1>
       <form>
         <div>
-          <label for="search-input"
-            >Suchbegriff:
-            <input type="text" id="search-input" placeholder="Suchbegriff" />
-          </label>
-          <label for="lang"
-            >Sprache:
-            <select name="lang" id="lang">
-              <option value="de">Deutsch</option>
-              <option value="ar">Arabisch</option>
-              <option value="fr">Französisch</option>
-              <option value="he">Hebräisch</option>
-              <option value="it">Italienisch</option>
-              <option value="zh">Mandarin</option>
-              <option value="nl">Niederländisch</option>
-              <option value="no">Norwegisch</option>
-              <option value="pt">Portugiesisch</option>
-              <option value="ru">Russisch</option>
-              <option value="es">Spanisch</option>
-              <option value="sv">Schwedisch</option>
-              <option value="ud">Urdu</option>
-            </select>
-          </label>
-          <label for="sort"
-            >Sortieren nach:
-            <select name="sort" id="sort">
-              <option value="relevancy">Relevanz</option>
-              <option value="popularity">Popularität</option>
-              <option value="publishedAt">Neueste zuerst</option>
-            </select>
-          </label>
+          <!-- <label for="search-input">Suchbegriff: </label> -->
+          <input type="text" id="search-input" placeholder="Suchbegriff" />
+
+          <!-- <label for="lang"> Sprache:</label> -->
+          <select name="lang" id="lang">
+            <option value="de">Deutsch</option>
+            <option value="ar">Arabisch</option>
+            <option value="en">Englisch</option>
+            <option value="fr">Französisch</option>
+            <option value="he">Hebräisch</option>
+            <option value="it">Italienisch</option>
+            <option value="zh">Mandarin</option>
+            <option value="nl">Niederländisch</option>
+            <option value="no">Norwegisch</option>
+            <option value="pt">Portugiesisch</option>
+            <option value="ru">Russisch</option>
+            <option value="es">Spanisch</option>
+            <option value="sv">Schwedisch</option>
+            <option value="ud">Urdu</option>
+          </select>
+
+          <!-- <label for="sort">Sortieren nach: </label> -->
+
+          <select name="sort" id="sort">
+            <option value="relevancy">Sortieren nach Relevanz</option>
+            <option value="popularity">Sortieren nach Popularität</option>
+            <option value="publishedAt">Sortieren nach Neueste zuerst</option>
+          </select>
         </div>
         <p class="error"></p>
         <input type="submit" value="Suchen" />

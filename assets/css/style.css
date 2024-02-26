@@ -54,14 +54,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #fdfce9; */
   background-color: #1b2a45;
   padding: 1rem;
   border-bottom: 1px solid white;
 }
 
 h1 {
-  /* color: #22465b; */
   color: white;
   text-align: center;
   margin-top: 20px;
@@ -80,11 +78,11 @@ form div {
   margin-bottom: 30px;
 }
 
-form label {
+/* form label {
   margin-bottom: 10px;
   margin-left: 3rem;
   color: white;
-}
+} */
 
 form input[type="submit"],
 form input[type="text"],
@@ -96,17 +94,22 @@ select {
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 1px #22465b;
+  margin-bottom: 10px;
 }
 
 form input[type="submit"] {
   width: 10rem;
   cursor: pointer;
-  /* color: #fdfce9;
-  background-color: #22465b; */
   background-color: white;
   color: #1b2a45;
+  border: 1px solid white;
 
   padding: 3px 5px;
+}
+
+form input[type="submit"]:hover {
+  color: white;
+  background-color: #1b2a45;
 }
 
 .error {
@@ -116,17 +119,12 @@ form input[type="submit"] {
 
 /* ! Main - Ausgabe der Artikelübersichten */
 main {
-  /* background-color: #fdfce9; */
   background-color: #1b2a45;
   color: #1b2a45;
 }
 
 .search-output {
   padding: 5rem;
-
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -140,26 +138,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: center; */
 
-  /* max-width: 30vw; */
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.501);
-
-  /* margin-bottom: 40px; */
 
   overflow: hidden;
 }
 
 .search-output div section {
-  /* padding: 0 0.5rem 4rem 0.5rem; */
   padding: 2rem 1rem;
 }
 
 .search-output img {
-  /* width: 30rem; */
-  /* margin-bottom: 20px; */
-
   font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
 }
 
@@ -190,19 +180,16 @@ main {
 }
 
 /* # Media Queries */
-/* # Zwischengröße 910px */
-@media only screen and (max-width: 910px) {
-  form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-}
-
 /* # Tablet 768px */
 @media only screen and (max-width: 768px) {
   .search-output {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 }
 

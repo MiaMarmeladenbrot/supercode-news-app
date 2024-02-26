@@ -1,8 +1,3 @@
-// # todos
-// - in 2 Funktionen umschreiben, siehe main1 (kann aber erst wieder getestet werden, wenn API wieder funktioniert)
-// - CSS
-// - Startseite mit ausgewählten News (geht aber erst wieder, wenn API wieder funktioniert)
-
 // ! Variablen
 const searchOutput = document.querySelector(".search-output");
 const form = document.querySelector("form");
@@ -14,7 +9,6 @@ const getUserInput = () => {
   const userInput = document.querySelector("#search-input").value;
   const langInput = document.querySelector("#lang").value;
   const sortInput = document.querySelector("#sort").value;
-  console.log(sortInput);
 
   // * Fehlermeldung bei leerem Input:
   if (userInput.length < 1) {
@@ -26,36 +20,40 @@ const getUserInput = () => {
   `)
     .then((res) => res.json())
     .then((newsData) => {
-      console.log(newsData);
+      // * Funktionsaufruf, um gefetchte Daten ins HTML zu schreiben:
+      fetchNewsData(newsData);
+      // console.log(newsData);
+    })
+    .catch((err) => console.log(err));
+};
 
-      // * falls es keine Suchergebnisse gibt, das im HTML ausgeben:
-      if (newsData.totalResults === 0) {
-        searchOutput.innerHTML = "<p class='error'>Keine Suchergebnisse</p>";
-      } else {
-        // * über alle Artikel des Suchergebnisses iterieren, um die jeweiligen News-Daten ins HTML zu schreiben:
-        newsData.articles.forEach((articleData) => {
-          // * Datum leserlich hinzufügen (mit 0, falls <10):
-          const date = new Date(articleData.publishedAt);
-          const day =
-            date.getUTCDate() < 10
-              ? `0${date.getUTCDate()}`
-              : date.getUTCDate();
-          const month =
-            date.getUTCMonth() + 1 < 10
-              ? `0${date.getUTCMonth() + 1}`
-              : date.getUTCMonth() + 1;
-          const year = date.getUTCFullYear();
-          const hours =
-            date.getUTCHours() < 10
-              ? `0${date.getUTCHours()}`
-              : date.getUTCHours();
-          const minutes =
-            date.getUTCMinutes() < 10
-              ? `0${date.getUTCMinutes()}`
-              : date.getUTCMinutes();
+// ! Funktion, um die gefetchten Daten fürs jeweilige Suchergebnisse ins HTML zu schreiben:
+const fetchNewsData = (newsData) => {
+  // * falls es keine Suchergebnisse gibt, das im HTML ausgeben:
+  if (newsData.totalResults === 0) {
+    searchOutput.innerHTML =
+      "<p class='error'>Keine Suchergebnisse gefunden</p>";
+  } else {
+    // * über alle Artikel des Suchergebnisses iterieren, um die jeweiligen News-Daten ins HTML zu schreiben:
+    newsData.articles.forEach((articleData) => {
+      // * Datum leserlich hinzufügen (mit 0, falls <10):
+      const date = new Date(articleData.publishedAt);
+      const day =
+        date.getUTCDate() < 10 ? `0${date.getUTCDate()}` : date.getUTCDate();
+      const month =
+        date.getUTCMonth() + 1 < 10
+          ? `0${date.getUTCMonth() + 1}`
+          : date.getUTCMonth() + 1;
+      const year = date.getUTCFullYear();
+      const hours =
+        date.getUTCHours() < 10 ? `0${date.getUTCHours()}` : date.getUTCHours();
+      const minutes =
+        date.getUTCMinutes() < 10
+          ? `0${date.getUTCMinutes()}`
+          : date.getUTCMinutes();
 
-          // * Daten ins HTML schreiben:
-          searchOutput.innerHTML += `
+      // * Daten ins HTML schreiben:
+      searchOutput.innerHTML += `
         <div>
         <img src="${articleData.urlToImage}" alt="${articleData.title}"/>
         <section>
@@ -69,10 +67,8 @@ const getUserInput = () => {
          </section>
         </div>
         `;
-        });
-      }
-    })
-    .catch((err) => console.log(err));
+    });
+  }
 };
 
 // ! EventListener auf der Form/dem Submit-Button, um alles im HTML auszugeben:
