@@ -10,23 +10,76 @@
     <header>
       <h1>News API</h1>
       <form>
-        <label for="search-input"
-          >Suchbegriff
-          <input type="text" id="search-input" placeholder="Suchbegriff" />
-        </label>
-        <label for="lang"
-          >Sprache
-          <select name="lang" id="lang"></select>
-        </label>
-        <label for="sort"
-          >Sortieren nach
-          <select name="sort" id="sort"></select>
-        </label>
+        <div>
+          <label for="search-input"
+            >Suchbegriff
+            <input type="text" id="search-input" placeholder="Suchbegriff" />
+          </label>
+          <label for="lang"
+            >Sprache
+            <select name="lang" id="lang">
+              <option value="de">Deutsch</option>
+              <option value="ar">Arabisch</option>
+              <option value="fr">Französisch</option>
+              <option value="he">Hebräisch</option>
+              <option value="it">Italienisch</option>
+              <option value="zh">Mandarin</option>
+              <option value="nl">Niederländisch</option>
+              <option value="no">Norwegisch</option>
+              <option value="pt">Portugiesisch</option>
+              <option value="ru">Russisch</option>
+              <option value="es">Spanisch</option>
+              <option value="sv">Schwedisch</option>
+              <option value="ud">Urdu</option>
+            </select>
+          </label>
+          <label for="sort"
+            >Sortieren nach
+            <select name="sort" id="sort">
+              <option value="relevancy">Relevanz</option>
+              <option value="popularity">Popularität</option>
+              <option value="publishedAt">Neueste zuerst</option>
+            </select>
+          </label>
+        </div>
         <input type="submit" value="Suchen" />
       </form>
     </header>
     <main>
-      <section class="search-output"></section>
+      <section class="search-output">
+        <div>
+          <h2>test</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad
+            iusto consequuntur deserunt accusantium nemo et commodi porro
+            quibusdam aliquid!
+          </p>
+          <img
+            src="https://img.zeit.de/gesellschaft/zeitgeschehen/2024-02/berlin-israel-fahne-staatsschutz/wide__1300x731"
+            alt="Berlin: Mann mit Israel-Fahnen in Berlin bedrängt und verletzt"
+          />
+          <a
+            href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
+            >Zum Artikel</a
+          >
+        </div>
+        <div>
+          <h2>test</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad
+            iusto consequuntur deserunt accusantium nemo et commodi porro
+            quibusdam aliquid!
+          </p>
+          <img
+            src="https://img.zeit.de/gesellschaft/zeitgeschehen/2024-02/berlin-israel-fahne-staatsschutz/wide__1300x731"
+            alt="Berlin: Mann mit Israel-Fahnen in Berlin bedrängt und verletzt"
+          />
+          <a
+            href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
+            >Zum Artikel</a
+          >
+        </div>
+      </section>
     </main>
     <script src="./assets/js/main.js"></script>
   </body>

@@ -1,24 +1,66 @@
+@font-face {
+  font-family: NewsCylceReg;
+  src: url(../font/NewsCycle-Regular.ttf);
+}
+
+@font-face {
+  font-family: NewsCycleBold;
+  src: url(../font/NewsCycle-Bold.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
 /* ! Header - Suchfeld */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
 h1 {
   text-align: center;
+  font-family: NewsCylceBold, Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
-  padding: 10px;
-  border-radius: 10px;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 30px;
 }
 
 form label {
   margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+form input[type="submit"],
+form input[type="text"],
+select {
+  font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
+  padding: 0 5px;
 }
 
 form input[type="submit"] {
@@ -26,3 +68,49 @@ form input[type="submit"] {
 }
 
 /* ! Main - Ausgabe der Artikelübersichten */
+.search-output {
+  margin: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-output div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  max-width: 25vw;
+  border-radius: 10px;
+  padding: 20px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.501);
+
+  margin-bottom: 40px;
+}
+
+.search-output h2 {
+  margin-bottom: 10px;
+  font-family: NewsCylceBold, Arial, Helvetica, sans-serif;
+}
+
+.search-output p {
+  margin-bottom: 10px;
+  font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
+}
+
+.search-output img {
+  width: 20vw;
+  margin-bottom: 20px;
+  font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
+}
+
+.search-output a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: NewsCylceReg, Arial, Helvetica, sans-serif;
+}
