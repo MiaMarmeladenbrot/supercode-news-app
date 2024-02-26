@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>News API</h1>
+      <form>
+        <label for="search-input"
+          >Suchbegriff
+          <input type="text" id="search-input" placeholder="Suchbegriff" />
+        </label>
+        <label for="lang"
+          >Sprache
+          <select name="lang" id="lang"></select>
+        </label>
+        <label for="sort"
+          >Sortieren nach
+          <select name="sort" id="sort"></select>
+        </label>
+        <input type="submit" value="Suchen" />
+      </form>
+    </header>
+    <main>
+      <section class="search-output"></section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
