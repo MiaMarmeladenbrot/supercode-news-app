@@ -1,4 +1,6 @@
 // # todos
+// - output-section auf display:block stellen mit Rahmen oben
+// - Fehlermeldung zu Suchergebnissen in errorOutput statt searchOutput
 // - in 2 Funktionen umschreiben, siehe main1 (kann aber erst wieder getestet werden, wenn API wieder funktioniert)
 // - CSS
 // - Startseite mit ausgewählten News (geht aber erst wieder, wenn API wieder funktioniert)

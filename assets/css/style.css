@@ -56,7 +56,8 @@ header {
   align-items: center;
   background-color: #1b2a45;
   padding: 1rem;
-  border-bottom: 1px solid white;
+  min-height: 100vh;
+  /* border-bottom: 1px solid white; */
 }
 
 h1 {
@@ -74,9 +75,9 @@ form {
   margin-bottom: 20px;
 }
 
-form div {
+/* form div {
   margin-bottom: 30px;
-}
+} */
 
 /* form label {
   margin-bottom: 10px;
@@ -117,6 +118,10 @@ form input[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
+header img {
+  /* max-width: 70%; */
+}
+
 /* ! Main - Ausgabe der Artikelübersichten */
 main {
   background-color: #1b2a45;
@@ -129,6 +134,12 @@ main {
   grid-template-columns: repeat(3, 1fr);
 
   gap: 3rem 2rem;
+
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .search-output div {
