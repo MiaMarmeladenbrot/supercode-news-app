@@ -8,15 +8,15 @@
   </head>
   <body>
     <header>
-      <h1>News API</h1>
+      <h1>Finde deine News</h1>
       <form>
         <div>
           <label for="search-input"
-            >Suchbegriff
+            >Suchbegriff:
             <input type="text" id="search-input" placeholder="Suchbegriff" />
           </label>
           <label for="lang"
-            >Sprache
+            >Sprache:
             <select name="lang" id="lang">
               <option value="de">Deutsch</option>
               <option value="ar">Arabisch</option>
@@ -34,7 +34,7 @@
             </select>
           </label>
           <label for="sort"
-            >Sortieren nach
+            >Sortieren nach:
             <select name="sort" id="sort">
               <option value="relevancy">Relevanz</option>
               <option value="popularity">Popularität</option>
@@ -42,42 +42,71 @@
             </select>
           </label>
         </div>
+        <p class="error"></p>
         <input type="submit" value="Suchen" />
       </form>
     </header>
     <main>
       <section class="search-output">
         <div>
-          <h2>test</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad
-            iusto consequuntur deserunt accusantium nemo et commodi porro
-            quibusdam aliquid!
-          </p>
           <img
             src="https://img.zeit.de/gesellschaft/zeitgeschehen/2024-02/berlin-israel-fahne-staatsschutz/wide__1300x731"
             alt="Berlin: Mann mit Israel-Fahnen in Berlin bedrängt und verletzt"
           />
-          <a
-            href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
-            >Zum Artikel</a
-          >
+          <section>
+            <h2>test</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad
+              iusto consequuntur deserunt accusantium nemo et commodi porro
+              quibusdam aliquid!
+            </p>
+            <h3>Die Zeit</h3>
+            <p>01.01.2024, 00:15</p>
+            <a
+              href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
+              >Zum Artikel</a
+            >
+          </section>
         </div>
         <div>
-          <h2>test</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad
-            iusto consequuntur deserunt accusantium nemo et commodi porro
-            quibusdam aliquid!
-          </p>
           <img
-            src="https://img.zeit.de/gesellschaft/zeitgeschehen/2024-02/berlin-israel-fahne-staatsschutz/wide__1300x731"
+            src="https://img.zeit.de/news/2024-01/26/eisbaeren-berlin-verlieren-mit-1-2-in-wolfsburg-image-group/wide__1300x731"
             alt="Berlin: Mann mit Israel-Fahnen in Berlin bedrängt und verletzt"
           />
-          <a
-            href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
-            >Zum Artikel</a
-          >
+          <section>
+            <h2>Berlin: Eisbären Berlin verlieren mit 1:2 in Wolfsburg</h2>
+            <p>
+              Hier finden Sie Informationen zu dem Thema „Berlin“. Lesen Sie
+              jetzt „Eisbären Berlin verlieren mit 1:2 in Wolfsburg“.
+            </p>
+            <h3>Die Zeit</h3>
+            <p>26.01.2024, 20:58</p>
+            <a
+              href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
+              >Zum Artikel</a
+            >
+          </section>
+        </div>
+        <div>
+          <img
+            src="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/5/3/5/2/3/1/shutterstock_761939458-41904f476fd0d964.jpg"
+            alt="Berlin: Mann mit Israel-Fahnen in Berlin bedrängt und verletzt"
+          />
+          <section>
+            <h2>KI im Krieg: Algorithmen werden Entscheidungen treffen</h2>
+            <p>
+              Das Thema "Künstliche Intelligenz" beschäftigt auch das Militär.
+              Auf einer Konferenz in Berlin geht es um die Verwendung von KI im
+              Krieg – und deren Grenzen.
+            </p>
+
+            <h3>Heise Online</h3>
+            <p>26.01.2024, 20:58</p>
+            <a
+              href="https://www.zeit.de/gesellschaft/2024-02/berlin-israel-fahne-mann-bedraengt-staatsschutz"
+              >Zum Artikel</a
+            >
+          </section>
         </div>
       </section>
     </main>
