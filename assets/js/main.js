@@ -1,9 +1,11 @@
 // # todos
-// - output-section auf display:block stellen mit Rahmen oben
+// - output-section auf display:block stellen mit Rahmen oben (.show)
 // - Fehlermeldung zu Suchergebnissen in errorOutput statt searchOutput
 // - in 2 Funktionen umschreiben, siehe main1 (kann aber erst wieder getestet werden, wenn API wieder funktioniert)
-// - CSS
 // - Startseite mit ausgewählten News (geht aber erst wieder, wenn API wieder funktioniert)
+// - CSS aufhübschen
+// - Back to top Button ergänzen
+// - footer mit credits
 
 // ! Variablen
 const searchOutput = document.querySelector(".search-output");
