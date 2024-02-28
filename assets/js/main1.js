@@ -1,3 +1,5 @@
+// # Variante mit verschiedenen Funktionen
+
 // ! Variablen
 const searchOutput = document.querySelector(".search-output");
 const form = document.querySelector("form");
@@ -34,6 +36,15 @@ const fetchNewsData = (newsData) => {
     searchOutput.innerHTML =
       "<p class='error'>Keine Suchergebnisse gefunden</p>";
   } else {
+    // * Search-Output-Section einblenden:
+    searchOutput.classList.add("show");
+
+    // * Header-Höhe anpassen:
+    document.querySelector("header").classList.add("less-height");
+
+    // * Willkommensbild verschwinden lassen:
+    document.querySelector(".welcome-img").classList.add("hide");
+
     // * über alle Artikel des Suchergebnisses iterieren, um die jeweiligen News-Daten ins HTML zu schreiben:
     newsData.articles.forEach((articleData) => {
       // * Datum leserlich hinzufügen (mit 0, falls <10):

@@ -1,9 +1,5 @@
-// # todos
-// - output-section auf display:block stellen mit Rahmen oben (.show)
-// - Fehlermeldung zu Suchergebnissen in errorOutput statt searchOutput
-// - in 2 Funktionen umschreiben, siehe main1 (kann aber erst wieder getestet werden, wenn API wieder funktioniert)
-// - Startseite mit ausgewählten News (geht aber erst wieder, wenn API wieder funktioniert)
-// - CSS aufhübschen
+// # Variante in einer großen Funktion
+// * todos
 // - Back to top Button ergänzen
 // - footer mit credits
 
@@ -34,8 +30,17 @@ const getUserInput = () => {
 
       // * falls es keine Suchergebnisse gibt, das im HTML ausgeben:
       if (newsData.totalResults === 0) {
-        searchOutput.innerHTML = "<p class='error'>Keine Suchergebnisse</p>";
+        errorOutput.innerHTML = "<p class='error'>Keine Suchergebnisse</p>";
       } else {
+        // * Search-Output-Section einblenden:
+        searchOutput.classList.add("show");
+
+        // * Header-Höhe anpassen:
+        document.querySelector("header").classList.add("less-height");
+
+        // * Willkommensbild verschwinden lassen:
+        document.querySelector(".welcome-img").classList.add("hide");
+
         // * über alle Artikel des Suchergebnisses iterieren, um die jeweiligen News-Daten ins HTML zu schreiben:
         newsData.articles.forEach((articleData) => {
           // * Datum leserlich hinzufügen (mit 0, falls <10):

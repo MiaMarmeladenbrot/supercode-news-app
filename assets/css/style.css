@@ -57,7 +57,11 @@ header {
   background-color: #1b2a45;
   padding: 1rem;
   min-height: 100vh;
-  /* border-bottom: 1px solid white; */
+  border-bottom: 1px solid white;
+}
+
+.less-height {
+  min-height: 50vh;
 }
 
 h1 {
@@ -74,16 +78,6 @@ form {
 
   margin-bottom: 20px;
 }
-
-/* form div {
-  margin-bottom: 30px;
-} */
-
-/* form label {
-  margin-bottom: 10px;
-  margin-left: 3rem;
-  color: white;
-} */
 
 form input[type="submit"],
 form input[type="text"],
@@ -130,16 +124,20 @@ main {
 
 .search-output {
   padding: 5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 3rem 2rem;
 
   display: none;
 }
 
+/* um search-output bei Suchausgabe anzeigen zu lassen */
 .show {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+}
+
+/* um Willkommensbild bei Suchausgabe verschwinden zu lassen: */
+.hide {
+  display: none;
 }
 
 .search-output div {
