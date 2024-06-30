@@ -188,6 +188,23 @@ main {
   background-color: #1b2a45;
 }
 
+/* .back-to-top {
+  background-color: white;
+  border: 1px solid black;
+  height: 30px;
+  width: 50px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  opacity: 0.5;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+} */
+
 /* # Media Queries */
 /* # Tablet 768px */
 @media only screen and (max-width: 768px) {
